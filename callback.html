@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verbunden – Durchgespielt</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body><main>
+<h1>Fast geschafft</h1>
+<p>TikTok hat die Verbindung erlaubt. Diese Seite kann jetzt geschlossen werden, der Uploader übernimmt den Rest.</p>
+<p class="leise" id="status"></p>
+<script>
+  const q = new URLSearchParams(location.search);
+  document.getElementById("status").textContent = q.get("error") ? "Fehler: " + q.get("error") : (q.get("code") ? "Code empfangen." : "");
+</script>
+</main></body>
+</html>
